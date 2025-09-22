@@ -1,0 +1,212 @@
+body {
+  background: #f8f4ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__image .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  grid-auto-rows: 70px;
+  gap: 0;
+  justify-content: center;
+  align-items: start;
+}
+
+.card__image .grid > div {
+  width: 70px;
+  height: 70px;
+}
+
+.wave-block,
+.blue-block,
+.white-block,
+.pink-block,
+.yellow-block,
+.pink-dots-block,
+.white-g-block,
+.white-g-block-inverted {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-block {
+  background: #fddca4;
+}
+
+.wave-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 100%;
+  background:
+    url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">\
+<path d="M0,25 L25,5 L50,25 L75,5 L100,25 L125,5 L150,25 L175,5 L200,25 L225,5 L250,25 L275,5 L300,25" stroke="white" stroke-width="4" fill="none" stroke-linejoin="round"/>\
+<path d="M0,60 L25,40 L50,60 L75,40 L100,60 L125,40 L150,60 L175,40 L200,60 L225,40 L250,60 L275,40 L300,60" stroke="white" stroke-width="4" fill="none" stroke-linejoin="round"/>\
+<path d="M0,95 L25,75 L50,95 L75,75 L100,95 L125,75 L150,95 L175,75 L200,95 L225,75 L250,95 L275,75 L300,95" stroke="white" stroke-width="4" fill="none" stroke-linejoin="round"/>\
+</svg>') no-repeat;
+  background-size: 140px 100%;
+}
+
+.blue-block {
+  background: #4361ee;
+}
+
+.blue-block.first::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -50px;
+  width: 60px;
+  height: 60px;
+  background: black;
+  border-radius: 50%;
+}
+
+.white-block {
+  background: #ffffff;
+  border: 1px solid #eee;
+}
+
+.white-block::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -30px;
+  width: 600px;
+  height: 300px;
+  background: #d598a3;
+  border-radius: 50%;
+  transform: scale(0.3);
+  transform-origin: top left;
+}
+
+.pink-block {
+  background: #d598a3;
+}
+
+.yellow-block {
+  background: #fddca4;
+}
+
+.pink-dots-block {
+  background: #d598a3; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.dot {
+  width: 35px;
+  height: 35px;
+  background: #4361ee;
+  border-radius: 50%;
+}
+
+.white-g-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 15px solid #4361ee;
+  border-left: 15px solid #4361ee;
+  box-sizing: border-box;
+}
+
+.white-g-block-inverted::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 15px solid #4361ee;
+  border-left: 15px solid #4361ee;
+  box-sizing: border-box;
+}
+
+.col1 { grid-column:1; grid-row:2; }
+.col2 { grid-column:2; grid-row:2; }
+.col3 { grid-column:3; grid-row:2; }
+.col4 { grid-column:4; grid-row:2; }
+.col5 { grid-column:5; grid-row:2; }
+.row4-col1 { grid-column:1; grid-row:3; }
+.row4-col2 { grid-column:2; grid-row:3; }
+.row4-col3 { grid-column:3; grid-row:3; }
+.row4-col4 { grid-column:4; grid-row:3; }
+.row5-col1 { grid-column:5; grid-row:3; }
+
+.card__body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__tag {
+  display: inline-block;
+  background: #fff7d6;
+  color: #333;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.card__date {
+  font-size: 12px;
+  color: #666;
+}
+
+.card__title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.card__description {
+  font-size: 14px;
+  color: #333;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.card__name {
+  font-size: 14px;
+  color: #333;
+}
