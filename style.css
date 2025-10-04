@@ -186,7 +186,15 @@ body {
 .card__title {
   font-size: 20px;
   margin: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
+
+.card__title:hover {
+  color: #4361ee;
+  transform: scale(1.05); 
+}
+
 
 .card__description {
   font-size: 14px;
